@@ -6,7 +6,7 @@
     <div class="row justify-content-center">
         <div class="col col-md-6">
             <a class="btn btn-dark my-3" onclick="history.back()" href="{% url 'gallery' %}">Go Back</a>
-            <div style="height: 90vh;">
+            <div style="height: 90vh; object-fit: cover;">
                 <img style="max-width: 100%; max-height: 100%;"
                  src="{{ photo.photo.url }}" alt="">
                 </div>

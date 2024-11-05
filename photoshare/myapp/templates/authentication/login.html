@@ -1,0 +1,58 @@
+{% extends 'partials/master.html' %}
+{% block content %}
+  <style>
+    body{
+      background-color: rgb(158, 173, 170);
+    }
+    .container {
+      margin-top: 100px;
+    }
+    .card {
+      width: 100%;
+    }
+   
+  </style>
+  <div class="container">
+    <div class="row">
+      <div class="col col-md-4"></div>
+      <!-- for form -->
+      <div class="col col-md-4">
+        <h3 class="text-center">Login Form</h3>
+        <div class="card mt-3">
+          <!-- start form -->
+          <form action="" method="POST">
+            {% csrf_token %}
+            
+            <!-- Email or username  -->
+             <div class="form-group m-3">
+              <label>Email or Username</label>
+              <input class="form-control" type="text" name="username" placeholder="Enter Username" required/>
+            </div>
+
+            <!-- Password 1  -->
+             <div class="form-group m-3">
+              <label>Password</label>
+              <input class="form-control" type="password" name="password" placeholder="Enter Password" required/>
+            </div>
+
+            <!-- Confirm Password 1  -->
+             <!-- <div class="form-group m-3">
+              <label>Confirm Password</label>
+              <input class="form-control" type="password" name="password2" placeholder="Confirm your password" required/>
+            </div> -->
+
+            <div class="">
+
+                <button type="submit" class="btn btn-success m-3 ">Login</button>
+                <a href="{% url 'register_page' %}" class="btn btn-primary">Register</a>
+            </div>
+                
+          </form>
+          <!-- end form -->
+        </div>
+      </div>
+      <!-- end form -->
+      <div class="col col-md-4"></div>
+    </div>
+  </div>
+{% endblock %}
